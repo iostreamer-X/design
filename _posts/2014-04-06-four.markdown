@@ -1,9 +1,0 @@
----
-layout: default
-date:   2014-04-06 23:26:12
-photo: io.png
-caption_header: IO
-caption: Async observable TCP servers in scala
-text: One time I screwed up bad with my tcp servers on a project. Got frustrated and made this.
-link: https://github.com/iostreamer-X/io
----

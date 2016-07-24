@@ -12,6 +12,7 @@ layout: default
 		<li class="grid-sizer"></li><!-- for Masonry column width -->
 		{% for post in site.posts %}
 		<li>
+			<a href="{{site.url}}{{post.url}}">
 			<figure>
 				<img src="{{ site.url }}/img/large/{{ post.photo }}" alt="img"/>
 				<figcaption>
@@ -19,6 +20,7 @@ layout: default
 					<p>{{ post.caption }}</p>
 				</figcaption>
 			</figure>
+		</a>
 		</li>
 		{% endfor %}
 	</ul>
@@ -29,24 +31,16 @@ layout: default
 		{% for post in site.posts %}
 		<li>
 			<figure>
-				<img src="{{ site.url }}/img/large/{{ post.photo }}" alt="img"/>
-				<figcaption>
-					<br/>
-					<h3>{{ post.caption_header}}</h3>
-					<p>{{ post.text }}</p>
-					<br/>
-					<a href="{{post.link}}" target="_blank">Demo</a>
-				</figcaption>
+				{{ post.content }}
 			</figure>
 		</li>
 		{% endfor %}
 	</ul>
 	<nav>
-		<span class="icon nav-prev"></span>
-		<span class="icon nav-next"></span>
-		<span class="icon nav-close"></span>
+		<span class="icon nav-prev" style="display:none"></span>
+		<span class="icon nav-next" style="display:none"></span>
+		<span class="icon nav-close" style="display:none"></span>
 	</nav>
-	<div class="info-keys icon">Navigate with arrow keys</div>
 	</section><!-- // slideshow -->
 
 	</div><!-- // grid-gallery -->

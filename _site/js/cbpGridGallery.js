@@ -99,11 +99,11 @@
 		var self = this;
 
 		// open the slideshow when clicking on the main grid items
-		this.gridItems.forEach( function( item, idx ) {
+		/*this.gridItems.forEach( function( item, idx ) {
 			item.addEventListener( 'click', function() {
 				self._openSlideshow( idx );
 			} );
-		} );
+		} );*/
 
 		// slideshow controls
 		this.ctrlPrev.addEventListener( 'click', function() { self._navigate( 'prev' ); } );
@@ -118,12 +118,12 @@
 				var keyCode = ev.keyCode || ev.which;
 
 				switch (keyCode) {
-					case 37:
+					/*case 37:
 						self._navigate( 'prev' );
 						break;
 					case 39:
 						self._navigate( 'next' );
-						break;
+						break;*/
 					case 27:
 						self._closeSlideshow();
 						break;
@@ -319,12 +319,12 @@
 		this.prevItem = null;
 		this.nextItem = null;
 
-		if( this.current > 0 ) {
+		/*if( this.current > 0 ) {
 			this.prevItem = this.slideshowItems[ this.current - 1 ];
 		}
 		if( this.current < this.itemsCount - 1 ) {
 			this.nextItem = this.slideshowItems[ this.current + 1 ];
-		}
+		}*/
 		this.currentItem = this.slideshowItems[ this.current ];
 	}
 

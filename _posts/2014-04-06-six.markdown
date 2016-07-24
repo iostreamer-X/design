@@ -1,9 +1,0 @@
----
-layout: default
-date:   2014-04-06 23:26:12
-photo: io.png
-caption_header: Crave
-caption: My shot at Machine learning
-text: Crave is an autonomous notification system which constantly learns from user activity and is able to post notifications at times which are most favorable.
-link: https://github.com/iostreamer-X/Crave
----

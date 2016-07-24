@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <meta name="description" content="Design" />
+    <meta name="keywords" content="iostreamer, design" />
+    <meta name="author" content="iostreamer" />
+
+    <script src="/design/js/anime.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/design/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/design/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="/design/css/glitch_scroll.css" />
+    <link rel="shortcut icon" href="/design/io.jpg">
+  </head>
+  <body>
+
+  <style media="screen">
+
+.daydream article div {
+  width: 2rem;
+  height: 2rem;
+  margin: .5rem;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+</style>
+
+
+<section class="daydream">
+  <article>
+    <div class="blue"></div>
+    <div class="green"></div>
+  </article>
+</section>
+
+<script>
+anime({
+  targets: ['.blue', '.green'],
+  translateX: '13rem',
+  rotate: 180,
+  borderRadius: '8px',
+  duration: 2000,
+  direction: 'alternate',
+  loop: true
+});
+</script
+
+
+  </body>
+</html>

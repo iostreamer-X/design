@@ -1,9 +1,0 @@
----
-layout: default
-date:   2014-04-06 23:26:12
-photo: dyna.png
-caption_header: Dyna
-caption: Linux based voice enabled virtual assistant.
-text: Powered by Wit.ai, this little nifty tool lets you control your pc through your voice.
-link: http://iostreamer.me/linux/python/2015/10/01/deadly-linux-python.html
----

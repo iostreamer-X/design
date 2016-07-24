@@ -1,9 +1,0 @@
----
-layout: default
-date:   2014-04-06 23:26:12
-photo: hostel.png
-caption_header: Hostel
-caption: Connect to your peers on your local network.
-text: This is a simple LAN chat which is able to find peers and connect to them. It's built on Node.js, something which I somehow got really good at.
-link: https://github.com/iostreamer-X/hostel
----

@@ -1,9 +1,0 @@
----
-layout: default
-date:   2014-04-06 23:26:12
-photo: unlock.png
-caption_header: Voice Auth in 4 lines
-caption: Root access on 'Ok Google'
-text: I scribbled some code, googled a bit and made my own voice authentication system, which sounds so wrong because I just wrote 4 lines.
-link: https://youtu.be/SsBgIWJ-VTE
----
