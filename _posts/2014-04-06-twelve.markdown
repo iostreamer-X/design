@@ -1,0 +1,9 @@
+---
+layout: default
+date:   2014-04-06 23:26:12
+photo: zeal.png
+caption_header: ZEAL
+caption: A platform for live streaming
+text: Delving deep inside Node.JS, I aim to create a public radio service where you login and stream other people's speaker output. The project is live and you can also download it's cli app to start upstreaming progress!
+link: https://ze-al.herokuapp.com
+---

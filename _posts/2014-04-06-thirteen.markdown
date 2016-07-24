@@ -1,0 +1,9 @@
+---
+layout: default
+date:   2014-04-06 23:26:12
+photo: awkward.png
+caption_header: Awkward, a NodeJS based shell
+caption: Everything is an Object!
+text: It's a shell where you can run system commands as JavaScript functions and then chain Array functions over the output. It's pretty cool and got me trending on HackerNews and Github.
+link: https://github.com/iostreamer-X/Awkward
+---

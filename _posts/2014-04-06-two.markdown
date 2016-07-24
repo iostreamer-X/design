@@ -1,0 +1,9 @@
+---
+layout: default
+date:   2014-04-06 23:26:12
+photo: 2.png
+caption_header: Public Clipboard
+caption: Your very own shareable clipboard
+text: Whatever you copy, it will be shared on your local network via HTTP.
+link: https://www.npmjs.com/package/public_clipboard
+---

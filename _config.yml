@@ -1,0 +1,9 @@
+name: Projects
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:title/
+url: /design
+baseurl: /design
+author:
+    name: iostreamer
+    twitter: "@_iostreamer_"

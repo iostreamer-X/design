@@ -1,0 +1,9 @@
+---
+layout: default
+date:   2014-04-06 23:26:12
+photo: jared.png
+caption_header: Jared the Slack bot
+caption: Manages tasks and stand up meetings on slack
+text: If you use slack you know what I am talking about. Automation, integrations and bots, these are the things which MAKE slack.
+link: http://iostreamer.me/bots/2016/01/07/jared-the-bot.html
+---

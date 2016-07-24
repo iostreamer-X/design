@@ -1,0 +1,9 @@
+---
+layout: default
+date:   2014-04-06 23:26:12
+photo: io.png
+caption_header: Live Streaming using Node.JS
+caption: Whatever my laptop plays, you hear it, realtime.
+text: On my blog, at the bottom, there is a switch. If you turn it on, you could listen to whatever I am playing on my laptop
+link: http://iostreamer.me
+---

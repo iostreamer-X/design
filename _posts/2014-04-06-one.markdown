@@ -1,0 +1,9 @@
+---
+layout: default
+date:   2014-04-06 23:45:12
+photo: 1.png
+caption_header: Amethyst Labs
+caption: My beloved startup
+text: Our AI helps you take your daily life decisions. It optimizes everything you do and suggests what you can do better.
+link: http://amethystlabs.org
+---

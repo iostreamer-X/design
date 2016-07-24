@@ -1,0 +1,9 @@
+---
+layout: default
+date:   2014-04-06 23:26:12
+photo: 10.png
+caption_header: Generative Art as background
+caption: Getting artsy!
+text: Saw a post on Hacker news describing how someone used nodejs to build generative art maker. Which made me realize I like generative art and I want it as my desktop background.
+link: out.mp4
+---

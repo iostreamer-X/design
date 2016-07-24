@@ -1,0 +1,9 @@
+---
+layout: default
+date:   2014-04-06 23:26:12
+photo: io.png
+caption_header: Avid
+caption: GPGPU computing FTW!
+text: Avid uses your GPU threads to simulate the behaviour of your entities. One needs to choose a model for the simulation and translate to the Avid instruction set operation codes to perform the simulation.
+link: https://github.com/iostreamer-X/Avid
+---
