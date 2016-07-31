@@ -1,45 +1,181 @@
 ---
 layout: design
-css: daydream
-date:   2016-07-25
+date: 2016-07-25
 photo: jared.png
 caption_header: Jared the Slack bot
 caption: Manages tasks and stand up meetings on slack
 ---
-<style media="screen">
 
-.daydream article div {
-  width: 2rem;
-  height: 2rem;
-  margin: .5rem;
+<style>
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+body {
+  background-color: #673AB7;
 }
 
-.blue {
-  background-color: blue;
-}
-
-.green {
-  background-color: green;
+.daydream .ball{
+  margin: auto;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 30rem;
+  background-color: #FFF;
 }
 
 </style>
 
-
 <section class="daydream">
-  <article>
-    <div class="blue"></div>
-    <div class="green"></div>
-  </article>
+  <div class="ball">
+
+  </div>
 </section>
 
 <script>
-anime({
-  targets: ['.blue', '.green'],
-  translateX: '13rem',
-  rotate: 180,
-  borderRadius: '8px',
-  duration: 2000,
-  direction: 'alternate',
-  loop: true
-});
-</script
+
+  function chain(...anims) {
+    anims = Array.prototype.concat.apply([],anims)
+    anims.reduce(function (prev, curr) {
+      if(prev.complete){
+        var oldComplete = prev.complete
+        prev.complete = function () {
+          oldComplete()
+          anime(curr)
+        }
+        return curr;
+      }
+      prev.complete = function () {
+        anime(curr)
+      }
+      return curr;
+    })
+  }
+
+  var ballDrop = {
+    targets: '.ball',
+    translateY: 220,
+    elasticity: 1,
+  }
+
+  var ballTransform = {
+    targets: '.ball',
+    'border-radius': 0,
+    'background-color': '#FFEB3B',
+    width: 2,
+    easing: 'linear',
+    duration: 70,
+  }
+
+  var lineRotate90 = {
+    targets: '.ball',
+    delay: 300,
+    translateY: 220,
+    rotate : 90,
+  }
+
+  var lineRotateLast = {
+    targets: '.ball',
+    delay: 100,
+    translateY: 220,
+    rotate : 630 + 60,
+  }
+
+var colors = [
+  {
+    body: '#673AB7',
+    div: '#E91E63'
+  },
+  {
+    body: '#212121',
+    div: '#FF5722'
+  },
+  {
+    body: '#303F9F',
+    div: '#FF5722'
+  },
+  {
+    body: '#009688',
+    div: '#212121'
+  },
+  {
+    body: '#E64A19',
+    div: '#212121'
+  },
+  {
+    body: '#673AB7',
+    div: '#E91E63'
+  },
+  {
+    body: '#212121',
+    div: '#FF5722'
+  },
+  {
+    body: '#303F9F',
+    div: '#FF5722'
+  },
+  {
+    body: '#009688',
+    div: '#212121'
+  },
+  {
+    body: '#E64A19',
+    div: '#212121'
+  },
+]
+
+  function rotators(anim) {
+    var anims = [anim]
+    for(var i=0; i<6; i++){
+      var newAnim = Object.assign({},anims[anims.length -1])
+      newAnim.rotate = (anims[anims.length -1]).rotate + 90
+      newAnim.delay = 0
+      newAnim.complete = function () {
+        var color = colors.pop()
+        anime({
+          targets: '.ball',
+          'background-color': color.div
+        })
+
+        anime({
+          targets: 'body',
+          'background-color': color.body
+        })
+      }
+      anims.push(newAnim)
+    }
+    return anims
+  }
+
+  lineRotateLast.complete = function () {
+    anime({
+      targets: '.ball',
+      'background-color': '#FFEB3B',
+      height: 3300,
+      translateY : -1300,
+      width: 1000,
+      translateX : -950,
+      rotate: 630 + 60,
+      complete: function () {
+      }
+    })
+
+    anime({
+      targets: 'body',
+      'background-color': '#673AB7'
+    })
+
+    /*anime({
+      targets: '.ball',
+      width: 1000,
+      translateX : -250,
+      rotate: 630 + 60,
+    })*/
+
+  }
+
+  chain([ballDrop, ballTransform], rotators(lineRotate90), [lineRotateLast])
+
+  setTimeout(function () {
+    anime(ballDrop);
+
+  },400);
+</script>
