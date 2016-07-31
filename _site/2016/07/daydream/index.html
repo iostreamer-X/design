@@ -23,7 +23,7 @@
 html, body {margin: 0; height: 100%; overflow: hidden}
 
 body {
-  background-color: #673AB7;
+  background-color: #455A64;
 }
 
 .daydream .ball{
@@ -71,7 +71,7 @@ body {
   var ballTransform = {
     targets: '.ball',
     'border-radius': 0,
-    'background-color': '#FFEB3B',
+    'background-color': '#FBC02D',
     width: 2,
     easing: 'linear',
     duration: 70,
@@ -142,7 +142,7 @@ var colors = [
       newAnim.delay = 0
       newAnim.complete = function () {
         var color = colors.pop()
-        anime({
+        /*anime({
           targets: '.ball',
           'background-color': color.div
         })
@@ -150,7 +150,7 @@ var colors = [
         anime({
           targets: 'body',
           'background-color': color.body
-        })
+        })*/
       }
       anims.push(newAnim)
     }
@@ -160,7 +160,6 @@ var colors = [
   lineRotateLast.complete = function () {
     anime({
       targets: '.ball',
-      'background-color': '#FFEB3B',
       height: 3300,
       translateY : -1300,
       width: 1000,
@@ -171,16 +170,8 @@ var colors = [
     })
 
     anime({
-      targets: 'body',
-      'background-color': '#673AB7'
+      targets: 'body'
     })
-
-    /*anime({
-      targets: '.ball',
-      width: 1000,
-      translateX : -250,
-      rotate: 630 + 60,
-    })*/
 
   }
 
