@@ -7,12 +7,14 @@ caption: Manages tasks and stand up meetings on slack
 ---
 
 <style>
+@import 'https://fonts.googleapis.com/css?family=Slabo+27px';
 
 html, body {margin: 0; height: 100%; overflow: hidden}
 
 body {
   background-color: #FFF;
 }
+
 
 .daydream .ball{
   margin: auto;
@@ -22,9 +24,31 @@ body {
   background-color: #E91E63;
 }
 
+.daydream .header{
+  align: right;
+  text-align: right;
+  z-index: 999;
+  color: #B0BEC5;
+  opacity: 0.0;
+}
+
+.daydream .header p{
+  display: inline;
+  font-family: 'Slabo 27px', serif;
+  width: 600px;
+  font-size: 80px;
+  float: right;
+  margin-right: 30px;
+}
+
 </style>
 
 <section class="daydream">
+  <div class="header">
+    <p id="header">
+      I am not the same, having seen the moon shine on the other side of the world.
+    </p>
+  </div>
   <div class="ball">
 
   </div>
@@ -78,6 +102,13 @@ body {
     rotate : 270 + 60,
   }
 
+  var headerAppear = {
+    targets: '.header',
+    delay: 500,
+    duration: 2000,
+    opacity: 1,
+  }
+
   function rotators(anim) {
     var anims = [anim]
     for(var i=0; i<2; i++){
@@ -96,9 +127,7 @@ body {
       translateY : -1300,
       width: 1000,
       translateX : -950,
-      rotate: 270+60,
-      complete: function () {
-      }
+      rotate: 270+60
     })
 
     anime({
@@ -107,7 +136,7 @@ body {
 
   }
 
-  chain([ballDrop, ballTransform], rotators(lineRotate90), [lineRotateLast])
+  chain([ballDrop, ballTransform], rotators(lineRotate90), [lineRotateLast,headerAppear])
 
   setTimeout(function () {
     anime(ballDrop);
