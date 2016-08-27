@@ -11,7 +11,7 @@ caption: Manages tasks and stand up meetings on slack
 html, body {margin: 0; height: 100%; overflow: hidden}
 
 body {
-  background-color: #455A64;
+  background-color: #FFF;
 }
 
 .daydream .ball{
@@ -19,7 +19,7 @@ body {
   height: 10rem;
   width: 10rem;
   border-radius: 30rem;
-  background-color: #FFF;
+  background-color: #E91E63;
 }
 
 </style>
@@ -59,7 +59,6 @@ body {
   var ballTransform = {
     targets: '.ball',
     'border-radius': 0,
-    'background-color': '#FBC02D',
     width: 2,
     easing: 'linear',
     duration: 70,
@@ -76,70 +75,15 @@ body {
     targets: '.ball',
     delay: 100,
     translateY: 220,
-    rotate : 630 + 60,
+    rotate : 270 + 60,
   }
-
-var colors = [
-  {
-    body: '#673AB7',
-    div: '#E91E63'
-  },
-  {
-    body: '#212121',
-    div: '#FF5722'
-  },
-  {
-    body: '#303F9F',
-    div: '#FF5722'
-  },
-  {
-    body: '#009688',
-    div: '#212121'
-  },
-  {
-    body: '#E64A19',
-    div: '#212121'
-  },
-  {
-    body: '#673AB7',
-    div: '#E91E63'
-  },
-  {
-    body: '#212121',
-    div: '#FF5722'
-  },
-  {
-    body: '#303F9F',
-    div: '#FF5722'
-  },
-  {
-    body: '#009688',
-    div: '#212121'
-  },
-  {
-    body: '#E64A19',
-    div: '#212121'
-  },
-]
 
   function rotators(anim) {
     var anims = [anim]
-    for(var i=0; i<6; i++){
+    for(var i=0; i<2; i++){
       var newAnim = Object.assign({},anims[anims.length -1])
       newAnim.rotate = (anims[anims.length -1]).rotate + 90
       newAnim.delay = 0
-      newAnim.complete = function () {
-        var color = colors.pop()
-        /*anime({
-          targets: '.ball',
-          'background-color': color.div
-        })
-
-        anime({
-          targets: 'body',
-          'background-color': color.body
-        })*/
-      }
       anims.push(newAnim)
     }
     return anims
@@ -152,7 +96,7 @@ var colors = [
       translateY : -1300,
       width: 1000,
       translateX : -950,
-      rotate: 630 + 60,
+      rotate: 270+60,
       complete: function () {
       }
     })
