@@ -1,9 +1,9 @@
 ---
 layout: design
 date: 2016-07-25
-photo: jared.png
-caption_header: Jared the Slack bot
-caption: Manages tasks and stand up meetings on slack
+photo: daydream.png
+caption_header: Daydream
+caption: My love for minimalism
 ---
 
 <style>
@@ -22,6 +22,7 @@ body {
   width: 10rem;
   border-radius: 30rem;
   background-color: #E91E63;
+  position: relative;
 }
 
 .daydream .header{
@@ -35,10 +36,52 @@ body {
 .daydream .header p{
   display: inline;
   font-family: 'Slabo 27px', serif;
-  width: 600px;
+  width: 700px;
   font-size: 80px;
   float: right;
   margin-right: 30px;
+}
+
+.daydream .info {
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  top: 370px;
+  left: 70px;
+  color: #fff;
+  opacity: 0;
+}
+
+a {
+	color: #E91E63;
+}
+
+a:hover {
+	color: #D81B60;
+}
+
+.info a {
+	color: #ddd;
+  text-decoration: underline;
+  margin-right: 10px;
+}
+
+.info a:hover {
+	color: #fff;
+}
+
+@media screen and (max-width: 60em){
+  .daydream .header > p {
+    font-size: 35px;
+    width: 300px;
+    margin-top: 100px;
+  }
+
+  .daydream .info {
+    font-size: 10px;
+    left: 8px;
+    width: 150px;
+  }
 }
 
 </style>
@@ -46,11 +89,29 @@ body {
 <section class="daydream">
   <div class="header">
     <p id="header">
-      I am not the same, having seen the moon shine on the other side of the world.
+      Hi! I am iostreamer. I am a <a href="https://github.com/iostreamer-X" target="_blank">developer</a>
+      <br>
+      and I love minimilast <a href="/design/">design</a>.
     </p>
   </div>
   <div class="ball">
 
+  </div>
+  <div class="info">
+    <p>
+      Uhm, actually the name is Rahul Ramteke. And I enjoy
+      design as much as I enjoy creating APIs or refactoring code.
+      I do JS, scala, java, even crytal(<span style="font-weight:bold;">not meth</span>). Bottom line,
+      I love languages.
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <a href="http://iostreamer.me" target="_blank">Blog</a>
+    <a href="https://github.com/iostreamer-X" target="_blank">Github</a>
+    <a href="http://iostreamer.me/assets/resume.pdf" target="_blank">Résumé </a>
   </div>
 </section>
 
@@ -109,6 +170,13 @@ body {
     opacity: 1,
   }
 
+  var infoAppear = {
+    targets: '.info',
+    delay: 400,
+    duration: 1400,
+    opacity: 1,
+  }
+
   function rotators(anim) {
     var anims = [anim]
     for(var i=0; i<2; i++){
@@ -136,7 +204,7 @@ body {
 
   }
 
-  chain([ballDrop, ballTransform], rotators(lineRotate90), [lineRotateLast,headerAppear])
+  chain([ballDrop, ballTransform], rotators(lineRotate90), [lineRotateLast,headerAppear, infoAppear])
 
   setTimeout(function () {
     anime(ballDrop);
